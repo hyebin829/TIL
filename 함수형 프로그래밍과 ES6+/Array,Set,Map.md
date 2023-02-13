@@ -31,11 +31,16 @@ for (const a of map) console.log(a)
 ```js
 const arr = [1, 2, 3]
 for (const a of arr) console.log(a)
+```
 
+```js
+//console
 arr[0] // 1
 arr[1] // 2
 arr[2] // 3
 ```
+
+</br>
 
 ```js
 const set = new Set([(1, 2, 3)])
@@ -99,9 +104,10 @@ for (const a of map.entries()) console.log(a) // ["a", 1] ["b", 2] ["c", 3]
 
 ```js
 //console
-map.values() // MapIterator {1,2,3}
 
-//이터레이터로 만든 것이 또 다시 Symbol.iterator를 가지고 있다.
+map.values() // MapIterator {1,2,3} 이터레이터이다.
+
+//Symbol.iterator를 가지고 있다.
 let iterator = map.values()
 iterator[Symbol.iterator] // f [Symbol.iterator]() { [native code] }
 
