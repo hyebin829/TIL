@@ -26,11 +26,14 @@ export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 ```
 * AppDispatch 타입
 
-AppDispatch는 @reduxjs/toolkit 패키지에서 제공하는 createSlice 함수를 이용하여 생성된 slice에서 사용되는 액션 객체들을 dispatch하는데 사용되는 타입입니다.
+AppDispatch는 @reduxjs/toolkit 패키지에서 제공하는 createSlice 함수를 이용하여 생성된 slice에서 사용되는
+액션 객체들을 dispatch하는데 사용되는 타입입니다.
 
-createSlice 함수를 이용하여 생성된 slice에서 사용되는 모든 액션 객체들의 타입은 createSlice 함수를 이용하여 생성된 리듀서 함수의 case 함수들의 첫 번째 매개변수로 사용되는 객체의 타입과 동일합니다.
+createSlice 함수를 이용하여 생성된 slice에서 사용되는 모든 액션 객체들의 타입은
+createSlice 함수를 이용하여 생성된 리듀서 함수의 case 함수들의 첫 번째 매개변수로 사용되는 객체의 타입과 동일합니다.
 
-일반적으로 AppDispatch 타입은 Redux의 Dispatch 타입과 동일합니다. 하지만 createSlice 함수를 이용하여 생성된 slice에서는 Redux Toolkit에서 제공하는 createAsyncThunk 함수와 같은 비동기 작업을 처리하는 유틸리티 함수를 사용할 때 필요합니다.
+일반적으로 AppDispatch 타입은 Redux의 Dispatch 타입과 동일합니다. 하지만 createSlice 함수를 이용하여 생성된 slice에서는
+Redux Toolkit에서 제공하는 createAsyncThunk 함수와 같은 비동기 작업을 처리하는 유틸리티 함수를 사용할 때 필요합니다.
 
 Redux Toolkit을 사용할 때는 useDispatch를 이용하여 dispatch 함수를 가져올 때 AppDispatch 타입을 사용하면 됩니다.
 이렇게 사용하면 dispatch 함수가 생성된 slice의 액션 객체를 받아서 사용할 수 있게 됩니다.
