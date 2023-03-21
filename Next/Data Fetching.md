@@ -101,7 +101,7 @@ export async function getServerSideProps(context) {
 
 - page에서만 사용할 수 있다.
 
-- **경로에 대해 빈 배열을 반환하면 필요에 따라 모든 페이지 생성을 연기할 수 있다.**
+- **경로에 대해 빈 배열을 반환하면 필요에 따라 모든 페이지 생성을 연기할 수 있다.(fallback : true)**
 
 </br>
 
