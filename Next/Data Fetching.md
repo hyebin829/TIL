@@ -116,3 +116,14 @@ export async function getServerSideProps(context) {
   - true : Next.js는 페이지 구성 요소의 대체 버전을 렌더링한 다음 런타임에 해당 페이지의 데이터를 가져온다.
   - blocking : 렌더링 하기 전에 요청된 페이지가 생성될 때 까지 기다린다.  
     서버가 요청한 페이지를 생성하는 동안 빈 페이지 또는 로딩 페이지를 반환한다.
+
+</br>
+</br>
+
+---
+
+## Incremental Static Regeneration
+
+ISR(Incremental Static Regeneration)을 사용하면 페이지를 완전히 다시 불러오지 않고도 특정 부분을 업데이트 할 수 있다.
+
+Next.js에서 ISR을 사용하려면 getStaticProps 함수에 revalidate 속성을 추가하면 된다.
