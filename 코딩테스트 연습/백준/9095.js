@@ -14,9 +14,9 @@ const dfs = (sum, target) => {
     }
     return cnt;
   } else {
-    dfs(sum + 1, target);
-    dfs(sum + 2, target);
-    dfs(sum + 3, target);
+    for (let i = 1; i <= 3; i++) {
+      dfs(sum + i, target);
+    }
   }
 };
 
